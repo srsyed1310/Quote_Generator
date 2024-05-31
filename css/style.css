@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    height: 100vh;
+    background-color: #414141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+}
+
+.container h1{
+    font-size: 2.3rem;
+    position: relative;
+    color: #414141;
+}
+
+.container h1::after{
+    content: "";
+    background-color: blueviolet;
+    width: 150px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+}
+
+.container blockquote{
+    font-size: 1.6rem;
+    color: #414141;
+    font-weight: 600;
+}
+.container blockquote::before, .container blockquote::after{
+    content: '"';
+}
+
+
+.load{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.container span{
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: relative;
+    color: #414141;
+
+}
+
+.container span::before{
+    content: '';
+    background-color: blueviolet;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: -35px;
+}
+
+
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.btn .next, .btn .twitter{
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.btn .next:hover, .btn .twitter:hover{
+    background: linear-gradient(135deg, rgba(125, 69, 177, 0.925), rgba(98, 53, 139, 0.74));
+}
+
+
+
+@media (max-width:520px) {
+
+    .container{
+        height: fit-content;
+    }
+
+    .container h1{
+        font-size: 2rem;
+    }
+    .container blockquote{
+        font-size: 1.2rem;
+    }
+    .container span{
+        font-size: 1.2rem;
+    }
+
+    .btn .next, .btn .twitter{
+        padding: 13px;
+    }
+
+}
+
+@media (max-width:400px) {
+    .container h1{
+        font-size: 1.5rem;
+    }
+    .container blockquote{
+        font-size: 1rem;
+    }
+    .container span{
+        font-size: 1rem;
+    }
+
+    .container .btn .next, .container .btn .twitter{
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+}
